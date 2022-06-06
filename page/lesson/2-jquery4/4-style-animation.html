@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <title>effects-download by http://www.jb51.net</title>
+    <script
+      type="text/javascript"
+      src="/lib/script/js/indoor-core/jscss-loader.js"
+      entry="/lib/script/js/page/lesson/2-jquery4/4-style-animation.js"
+    ></script>
+  </head>
+
+  <body>
+    <div class="t-btns">
+      <input
+        type="button"
+        id="mock-slideToggle"
+        value="使用anmiate方法实现slideToggle的效果"
+      />
+      <input
+        type="button"
+        id="anim-switcher-box"
+        value="为字体切换面板增加动画"
+      />
+      <input
+        type="button"
+        id="anim-queue-switcher-box"
+        value="字体切换面板动画队列"
+      />
+      <input
+        type="button"
+        id="anim-opacity-move-at-the-same-time"
+        value="使用queue属性,将分部进行改为同时进行;使用queue方法或animate的回调函数,使非效果方法定时进行"
+      />
+      <input
+        type="button"
+        id="mult-ele-anim"
+        value="多元素的动画默认效果同时进行"
+      />
+      <input
+        type="button"
+        id="mult-ele-anim-step"
+        value="利用回调函数实现多元素的动画效果依次进行"
+      />
+      <input
+        type="button"
+        id="mult-ele-by-queue"
+        value="利用queue实现多元素动画效果依次进行"
+      />
+    </div>
+    <div id="container">
+      <div id="branding" class="clearfix">
+        <div id="chapter-number">4</div>
+        <h1>Effects</h1>
+        <h1 class="subtitle">How to Add Flair to Your Actions</h1>
+      </div>
+
+      <h2>Abraham Lincoln's Gettysburg Address</h2>
+      <div id="switcher">
+        <div class="label">Text Size:<span id="curSize"></span></div>
+        <button id="switcher-default">Default</button>
+        <button id="switcher-large">Larger</button>
+        <button id="switcher-small">Smaller</button>
+      </div>
+      <div class="speech">
+        <p>
+          Fourscore and seven years ago our fathers brought forth on this
+          continent a new nation, conceived in liberty, and dedicated to the
+          proposition that all men are created equal.
+          <span class="more">. . .</span>
+        </p>
+        <p>
+          Now we are engaged in a great civil war, testing whether that nation,
+          or any nation so conceived and so dedicated, can long endure. We are
+          met on a great battlefield of that war. We have come to dedicate a
+          portion of that field as a final resting-place for those who here gave
+          their lives that the nation might live. It is altogether fitting and
+          proper that we should do this. But, in a larger sense, we cannot
+          dedicate, we cannot consecrate, we cannot hallow, this ground.
+        </p>
+        <a href="#" class="more">show/hide more</a>
+        <p>
+          The brave men, living and dead, who struggled here have consecrated
+          it, far above our poor power to add or detract. The world will little
+          note, nor long remember, what we say here, but it can never forget
+          what they did here. It is for us the living, rather, to be dedicated
+          here to the unfinished work which they who fought here have thus far
+          so nobly advanced.
+        </p>
+        <p>
+          It is rather for us to be here dedicated to the great task remaining
+          before us&mdash;that from these honored dead we take increased
+          devotion to that cause for which they gave the last full measure of
+          devotion&mdash;that we here highly resolve that these dead shall not
+          have died in vain&mdash;that this nation, under God, shall have a new
+          birth of freedom and that government of the people, by the people, for
+          the people, shall not perish from the earth.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

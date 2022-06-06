@@ -1,0 +1,85 @@
+.chapter {
+  width: 42em;
+}
+
+#f-title {
+  font-size: 1.5em;
+}
+#excerpt {
+  font-style: italic;
+}
+
+/* -----------------------------------
+   =FOOTNOTES
+-------------------------------------- */
+
+span.footnote {
+  font-style: italic;
+  font-family: "Times New Roman", Times, serif;
+  display: block;
+  margin: 1em 0;
+}
+
+.chapter span.footnote {
+  display: inline;
+}
+.text-reference {
+  font-weight: bold;
+}
+#notes li {
+  margin: 1em 0;
+}
+
+#notes {
+  margin-top: 1em;
+  border-top: 1px solid #dedede;
+}
+#footer {
+  margin-top: 1em;
+  border-top: 1px solid #dedede;
+}
+
+/* -----------------------------------
+   =SIMPLE PULL-QUOTE
+-------------------------------------- */
+/*.pulled {
+  background: #e5e5e5;
+  position: absolute;
+  width: 145px;
+  top: -20px;
+  right: -180px;
+  padding: 12px 5px 12px 10px;
+  font: italic 1.4em "Times New Roman", Times, serif;
+}
+*/
+/* -----------------------------------
+   =PULL-QUOTE WITH ROUNDED CORNERS AND DROP SHADOWS
+-------------------------------------- */
+
+.pulled-quote {
+  background: url(/lib/image/png/pq-top.jpg) no-repeat left top;
+  position: absolute;
+  width: 160px;
+  right: -180px;
+  padding-top: 18px;
+}
+/* .pulled {
+  background: url(pq-bottom.jpg) no-repeat left bottom;
+  position: relative;
+  display: block;
+  width: 140px;
+  padding: 0 10px 24px 10px;
+  font: italic 1.4em "Times New Roman", Times, serif;
+} */
+.pulled {
+  position: absolute;
+  width: 120px;
+  top: -20px;
+  right: -180px;
+  padding: 10px;
+  font: italic 0.5em "Times New Roman", Times, serif;
+  background: #e5e5e5;
+  border: 1px solid #999;
+  border-radius: 8px;
+  box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.6);
+}

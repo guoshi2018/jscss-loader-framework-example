@@ -1,0 +1,18 @@
+div.trigger-test,
+div.ext-event {
+	border: 1px solid rgb(32, 18, 24);
+	margin: 1em auto;
+	padding: 1em;
+	font-size: medium;
+	width: 60%;
+	min-height: 100px;
+}
+div.ext-event {
+	div.middle {
+		margin: 2.2em;
+		padding: 2em;
+		width: 80%;
+		min-height: 60%;
+		background-color: rgb(143, 133, 146);
+	}
+}

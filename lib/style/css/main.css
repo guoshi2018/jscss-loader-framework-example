@@ -1,0 +1,506 @@
+.temp,
+.test,
+.tmp {
+  display: block;
+}
+
+.temp-border,
+.temp-border * {
+  /*临时需要显示边框,以示元素长宽时 */
+  border: 1px solid purple;
+}
+
+.box {
+  background-color: brown;
+  color: blue;
+  width: 300px;
+  height: 70px;
+  position: relative;
+  line-height: 70px;
+  text-align: center;
+  font-size: 2.2rem;
+  margin: 1em 2em;
+}
+
+div.ajax-result {
+  width: 30em;
+  height: 50em;
+}
+
+/*-------------------------------------------------------------------------*/
+/*@import '//fonts.googleapis.com/css?family=Lato:400,400italic|Arvo:700,400,400italic';
+*/
+.btn {
+  min-width: 6em;
+  /*  font-size:0.3em;*/
+  padding: 0.5em;
+}
+
+.index-thumb {
+  height: 13em;
+  object-fit: cover;
+}
+
+.details-thumb {
+  height: 28em;
+  width: 28em;
+  object-fit: contain;
+}
+
+.mx-neg-15 {
+  margin-left: -15px !important;
+  margin-right: -15px !important;
+}
+
+/*-----------------------------------------for debugging or testing only----------------------*/
+.border-red {
+  border: 1px solid red;
+}
+.border-blue {
+  border: 1px solid blue;
+}
+.border-green {
+  border: 1px solid green;
+}
+
+/*jcarousel section*/
+.btn-container {
+  text-align: center; /*使按钮居中：ok*/
+}
+
+.btn-container input[type="button"] {
+  margin: 2em 1.2em;
+}
+
+/*如果是采用javascript动态设置，则可以方便的定义图片边距
+      注意：将jcar-list的width改为height，即可切换为垂直方向轮播
+  */
+.jcarousel {
+  /*根容器，class必须取名为jcarousel*/
+  --view-width: 50em;
+  --view-height: 30em;
+  --super-value: 10000em;
+  --img-gap: 1em;
+
+  position: relative;
+  overflow: hidden;
+
+  width: var(--view-width);
+  height: var(
+    --view-height
+  ); /*横向轮播时，非必须，高度由子元素撑开,但竖向轮播时，必须*/
+  background-color: black;
+}
+.jcarousel .jcar-list {
+  /*div/ul/li/img的ul元素*/
+  width: var(--super-value); /*设置为height，可实现竖向滑动*/
+  position: relative;
+  /*optional*/
+  list-style: none; /*考虑使用div/ul/li/img形式*/
+  margin: 0;
+  padding: 0;
+}
+.jcarousel .jcar-list li.jcar-item {
+  /*div/ul/li/img的li元素*/
+  float: left; /*right可实现相反方向滑动*/
+}
+/*div/ul/li/img的img，完整不变形显示，但两侧或上下可能有黑边（空白）*/
+.jcarousel .jcar-list li.jcar-item img {
+  width: var(--view-width);
+  height: var(--view-height); /*同时撑开父元素高度*/
+  object-fit: /*contain*/ cover;
+}
+
+/*div/div/img的img,以及div/div/pre,综合上述的li和img标签*/
+.jcarousel .jcar-list img.jcar-item,
+.jcarousel .jcar-list pre.jcar-item {
+  float: left;
+  width: var(--view-width);
+  height: var(--view-height);
+  object-fit: /*contain*/ cover;
+}
+
+/*轮播到当前，适当放大*/
+.enlarge {
+  transform: scale(0.99);
+}
+
+.temp {
+  cursor: hand;
+}
+
+/*jcarousel 前进 后退 控制按钮 */
+.jcar-prev,
+.jcar-next {
+  /*
+      position: absolute;
+      border: solid 1px green;
+      top: 50%;
+      transform: translate(0,-50%);*/
+  position: absolute;
+  border: solid 1px green;
+  top: 50%;
+  width: 2em;
+  height: 2em;
+  transform: translate(0, -50%);
+  text-align: center;
+  background: #4e443c;
+  color: #fff;
+  text-decoration: none;
+  text-shadow: 0 0 1px #000;
+  font: 1.5em/1.8em Arial, sans-serif; /**/
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  -webkit-box-shadow: 0 0 2px #999;
+  -moz-box-shadow: 0 0 2px #999;
+  box-shadow: 0 0 2px #999;
+}
+.jcar-prev {
+  left: 1.5em;
+}
+.jcar-next {
+  right: 1.5em;
+}
+jcar-prev:hover span,
+jcar-next:hover span {
+  display: block;
+}
+
+.jcar-prev.inactive,
+.jcar-next.inactive {
+  pointer-events: none;
+  background-color: grey;
+  display: none;
+  /*    opacity: .5;
+      cursor: default;
+      pointer-events: none*/
+}
+
+/** 分页 **/
+.jcar-pagingflag {
+  position: absolute;
+  border: solid 1px blue;
+  bottom: 2em;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+.jcar-pagingflag a {
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+}
+
+.jcar-pagingflag a.selected {
+  color: red;
+  background-color: black;
+}
+
+.for-add {
+  display: none;
+}
+
+/*==============================================================轮播-------------*/
+
+/*如果是采用javascript动态设置，则可以方便的定义图片边距
+    注意：将jcar-list的width改为height，即可切换为垂直方向轮播
+*/
+.mytemp {
+  /*根容器，class必须取名为mytemp*/
+  --view-width: 50em;
+  --view-height: 30em;
+  --half-view-width: 25em;
+  --half-view-height: 15em;
+  --super-value: 10000em;
+  --img-gap: 1em;
+  position: relative;
+  overflow: hidden;
+  width: var(--view-width);
+  height: var(
+    --view-height
+  ); /*横向轮播时，非必须，高度由子元素撑开,但竖向轮播时，必须*/
+  background-color: black;
+}
+
+.mytemp .jcar-list {
+  /*div/ul/li/img的ul元素*/
+  width: var(--super-value); /*设置为height，可实现竖向滑动*/
+  position: relative;
+  /*optional*/
+  list-style: none; /*考虑使用div/ul/li/img形式*/
+  margin: 0;
+  padding: 0;
+}
+
+.mytemp .jcar-list li.jcar-item {
+  /*div/ul/li/img的li元素*/
+  float: left; /*right可实现相反方向滑动*/
+}
+/*div/ul/li/img的img，完整不变形显示，但两侧或上下可能有黑边（空白）*/
+.mytemp .jcar-list li.jcar-item img {
+  width: var(--view-width);
+  height: var(--view-height); /*同时撑开父元素高度*/
+  object-fit: /*contain*/ cover;
+}
+
+/*div/div/img的img,以及div/div/pre,综合上述的li和img标签*/
+.mytemp .jcar-list img.jcar-item,
+.mytemp .jcar-list pre.jcar-item {
+  float: left;
+  width: var(--view-width);
+  height: var(--view-height);
+  object-fit: /*contain*/ cover;
+}
+/*--------------------------------------------------------------------------------*/
+.btn {
+  min-width: 6em;
+  /*  font-size:0.3em;*/
+  padding: 0.5em;
+}
+
+.index-thumb {
+  height: 13em;
+  object-fit: cover;
+}
+
+.details-thumb {
+  height: 28em;
+  width: 28em;
+  object-fit: cover;
+}
+
+.edit-thumb {
+  height: 18em;
+  width: 18em;
+  object-fit: contain;
+}
+
+.mx-neg-15 {
+  margin-left: -15px !important;
+  margin-right: -15px !important;
+}
+
+.hidden {
+  display: none;
+}
+
+/**             jcarousel section                       **/
+.btn-container {
+  text-align: center; /*使按钮居中：ok*/
+}
+
+.btn-container input[type="button"] {
+  margin: 2em 1.2em;
+}
+
+/*如果是采用javascript动态设置，则可以方便的定义图片边距
+      注意：将jcar-list的width改为height，即可切换为垂直方向轮播
+  */
+.jcarousel {
+  /*根容器，class必须取名为jcarousel*/
+  --view-width: 50em;
+  --view-height: 30em;
+  --half-view-width: 25em;
+  --half-view-height: 15em;
+  --super-value: 10000em;
+  --img-gap: 1em;
+
+  position: relative;
+  overflow: hidden;
+
+  width: var(--view-width);
+  height: var(
+    --view-height
+  ); /*横向轮播时，非必须，高度由子元素撑开,但竖向轮播时，必须*/
+  background-color: black;
+}
+.jcarousel .jcar-list {
+  /*div/ul/li/img的ul元素*/
+  width: var(--super-value); /*设置为height，可实现竖向滑动*/
+  position: relative;
+  /*optional*/
+  list-style: none; /*考虑使用div/ul/li/img形式*/
+  margin: 0;
+  padding: 0;
+}
+.jcarousel .jcar-list li.jcar-item {
+  /*div/ul/li/img的li元素*/
+  float: left; /*right可实现相反方向滑动*/
+}
+/*div/ul/li/img的img，完整不变形显示，但两侧或上下可能有黑边（空白）*/
+.jcarousel .jcar-list li.jcar-item img {
+  width: var(--view-width);
+  height: var(--view-height); /*同时撑开父元素高度*/
+  object-fit: /*contain*/ cover;
+}
+
+/*div/div/img的img,以及div/div/pre,综合上述的li和img标签*/
+.jcarousel .jcar-list .jcar-item,
+.jcarousel .jcar-list pre.jcar-item {
+  float: left;
+  width: var(--view-width);
+  height: var(--view-height);
+  object-fit: /*contain*/ cover;
+}
+
+/*轮播到当前，适当放大*/
+.enlarge {
+  transform: scale(0.99);
+}
+
+/*jcarousel 前进 后退 控制按钮 */
+.jcar-prev,
+.jcar-next {
+  /*
+      position: absolute;
+      border: solid 1px green;
+      top: 50%;
+      transform: translate(0,-50%);*/
+  display: block;
+  position: absolute;
+  top: 0;
+  width: var(--half-view-width);
+  height: var(--view-height);
+  color: #fff;
+}
+.jcar-prev {
+  left: 0;
+}
+.jcar-next {
+  right: 0;
+}
+.jcar-prev span,
+.jcar-next span {
+  display: none;
+  position: absolute;
+  text-align: center;
+  background: #4e443c;
+  text-decoration: none;
+  text-shadow: 0 0 1px #000;
+  font: 1.5em/1.8em Arial, sans-serif; /**/
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  -webkit-box-shadow: 0 0 2px #999;
+  -moz-box-shadow: 0 0 2px #999;
+  box-shadow: 0 0 2px #999;
+  width: 2em;
+  height: 2em;
+  top: 50%;
+  color: yellow;
+  transform: translate(0, -50%);
+}
+
+.jcar-prev span {
+  left: 1.8em;
+}
+.jcar-next span {
+  right: 1.8em;
+}
+.jcar-prev:hover span,
+.jcar-next:hover span {
+  display: block;
+}
+
+.jcar-prev.inactive,
+.jcar-next.inactive {
+  display: none;
+}
+
+/** 分页 **/
+.jcar-pagingflag {
+  position: absolute;
+  border: solid 1px blue;
+  display: flex;
+  justify-content: center;
+  /* 
+    
+      bottom: 5%;
+      width: 100%;
+      flex-direction: row;
+     */
+  right: 5%;
+  height: 100%;
+  top: 0;
+  flex-direction: column;
+}
+.jcar-pagingflag a {
+  /*
+      margin-left:0.2em;
+      margin-right:0.2em;
+       */
+  margin-top: 0.2em;
+  margin-bottom: 0.2em;
+}
+
+.jcar-pagingflag a.selected {
+  color: red;
+  background-color: black;
+}
+
+.for-add {
+  display: none;
+}
+
+/**                                        dom node changed           **/
+ul.food {
+  list-style: none; /*考虑使用div/ul/li/img形式*/
+  margin: 0;
+  padding: 0;
+  width: 10%;
+  margin: 2em auto;
+}
+
+/*-----------------------------------------for debugging or testing only----------------------*/
+.border-red {
+  border: 1px solid red;
+}
+
+.border-blue {
+  border: 1px solid blue;
+}
+
+.border-green {
+  border: 1px solid green;
+}
+
+.ct_prev span * {
+  border: 1px solid groove;
+}
+
+/*-----------------------------from jquery exercise main.css-----------------------------------*/
+.temp,
+.test,
+.tmp {
+  display: block;
+}
+
+.temp-border,
+.temp-border * {
+  /*临时需要显示边框,以示元素长宽时 */
+  border: 1px solid purple;
+}
+
+.box {
+  background-color: brown;
+  color: blue;
+  width: 300px;
+  height: 70px;
+  position: relative;
+  line-height: 70px;
+  text-align: center;
+  font-size: 2.2rem;
+}
+
+textarea.ajax-result {
+  width: 500px;
+  height: 100px;
+}
+
+/*------------------------------3-effect.html-----------------*/
+.content-demo {
+  font-size: 1.2em;
+  margin: 2em auto;
+  width: 80%;
+  padding: 1em;
+  text-align: right;
+}

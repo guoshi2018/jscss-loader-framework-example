@@ -1,0 +1,45 @@
+div.container {
+  border: 1px solid grey;
+  margin: 2em auto;
+  width: 80%;
+  padding: 2em;
+}
+
+table {
+  margin: 1em 0;
+  border-collapse: collapse;
+  border: 1px solid green;
+  background-color: rgb(177, 132, 9);
+}
+th,
+td {
+  padding: 2px 8px;
+}
+thead th {
+  border-bottom: 1px solid #999;
+  text-align: left;
+}
+tfoot td {
+  border-top: 1px solid #999;
+  border-top: 1px solid #999;
+  text-align: left;
+}
+#sum td {
+  font-weight: bold;
+}
+#average td {
+  font-style: italic;
+}
+
+tr.one {
+  color: #fff;
+  background-color: #080;
+}
+tr.two {
+  background-color: #ffa;
+}
+
+h2.disabled span {
+  font-size: 0.2em;
+  color: teal;
+}

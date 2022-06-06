@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <title>开发插件</title>
+    <script
+      type="text/javascript"
+      src="/lib/script/js/indoor-core/jscss-loader.js"
+      entry="/lib/script/js/page/lesson/2-jquery4/8-dev-plugin.js"
+    ></script>
+  </head>
+  <body>
+    <div class="container" id="plugin">
+      <h1>插件测试 Inventory</h1>
+      <table id="inventory">
+        <thead>
+          <tr class="one">
+            <th>Product</th>
+            <th>Quantity</th>
+            <th>Price</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td>
+              <a
+                href="spam.html"
+                data-ttt="hello"
+                data-tooltip-text="Nutritious and delicious!"
+                >Spam</a
+              >
+            </td>
+            <td>4</td>
+            <td>2.50</td>
+          </tr>
+          <tr>
+            <td>
+              <a
+                href="egg.html"
+                data-ttt="world"
+                data-tooltip-text="Farm fresh or scrambled!"
+                >Egg</a
+              >
+            </td>
+            <td>12</td>
+            <td>4.32</td>
+          </tr>
+          <tr>
+            <td>
+              <a
+                href="gourmet-spam.html"
+                data-ttt="hey"
+                data-tooltip-text="Chef Hermann's recipe."
+                >Gourmet Spam</a
+              >
+            </td>
+            <td>14</td>
+            <td>7.89</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr class="two" id="sum">
+            <td>Total</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr id="average">
+            <td>Average</td>
+            <td></td>
+            <td></td>
+          </tr>
+        </tfoot>
+      </table>
+      <input type="button" value="不包含迭代操作,交换class.失败" class="err" />
+      <input type="button" value="使用迭代操作,交换class,成功" class="suc" />
+      <input
+        type="button"
+        value="无参的jquery实例方法,模拟阴影效果"
+        class="shadow1"
+      />
+      <input
+        type="button"
+        value="带参的jquery实例方法,模拟阴影效果"
+        class="shadow2"
+      />
+      <input
+        type="button"
+        value="带可选参数的jquery实例方法,模拟阴影效果"
+        class="shadow3"
+      />
+    </div>
+
+    <div class="container" id="widget">
+      <h1>部件测试</h1>
+      <input type="button" value="创建链接的tooltip" class="create" />
+      <input type="button" value="启用链接的tooltip" class="enable" />
+      <input type="button" value="禁用链接的tooltip" class="disable" />
+      <input type="button" value="打开链接的tooltip" class="open" />
+      <input type="button" value="关闭链接的tooltip" class="close-tip" />
+      <input type="button" value="测试方法的连缀" class="cluster" />
+      <input type="button" value="销毁链接的tooltip" class="destroy" />
+      <h2 class="disabled">当前是否禁用状态:<span /></h2>
+      <h2 class="listen">当前收到事件:<span /></h2>
+    </div>
+  </body>
+</html>

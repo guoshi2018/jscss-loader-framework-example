@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <title>1-basic</title>
+    <script
+      type="text/javascript"
+      src="/lib/script/js/indoor-core/jscss-loader.js"
+      entry="/lib/script/js/page/lesson/1-jquery/1-basic.js"
+    ></script>
+  </head>
+  <body>
+    <a class="test" id="id_firstlink" href="http://jquery.com/"
+      >jQu<i>er</i>y</a
+    >
+    <a class="temp" id="id_secondlink" href="#not an id">a temp link</a>
+    <a class="tmp" id="id_thirdlink" href="http://www.guitarchina.com"
+      >goto guitarchina</a
+    >
+    <p>the first paragraph</p>
+    <p>the second paragraph</p>
+    <p>the third paragraph</p>
+    <!--iframe会导致 VM9:2762 crbug/1173575, non-JS module files deprecated.警告
+    <iframe class="test" src="http://www.guitarchina.com"></iframe>-->
+    <textarea style="word-wrap: normal" id="tt"></textarea>
+    <ul class="index_demo" id="temp_ul">
+      <li id="foo1" class="c_foo1">foo</li>
+      <li id="bar1" class="c_bar1">bar</li>
+      <li id="baz1">baz</li>
+    </ul>
+    <pre id="ph">
+        用作占位,以此测试scrollLeft scrollTop
+        All of the methods in this section manipulate the DOM in some manner. A few of them simply change one of the attributes of an element (also listed in the Attributes category), while others set an element's style properties (also listed in the CSS category). Still others modify entire elements (or groups of elements) themselves—inserting, copying, removing, and so on. All of these methods are referred to as "setters," as they change the values of properties.
+        A few of these methods—such as .attr(), .html(), and .val()—also act as "getters," retrieving information from DOM elements for later use.
+        
+        Also in: Attributes | Manipulation > Class Attribute | CSS
+        .addClass()
+        Adds the specified class(es) to each element in the set of matched elements.
+        
+        Also in: Manipulation > DOM Insertion, Outside
+        .after()
+        Insert content, specified by the parameter, after each element in the set of matched elements.
+        
+        Also in: Manipulation > DOM Insertion, Inside
+        .append()
+        Insert content, specified by the parameter, to the end of each element in the set of matched elements.
+        
+        Also in: Manipulation > DOM Insertion, Inside
+        .appendTo()
+        Insert every element in the set of matched elements to the end of the target.
+        
+        Also in: Attributes | Manipulation > General Attributes
+        .attr()
+        Get the value of an attribute for the first element in the set of matched elements or set one or more attributes for every matched element.
+        
+        Also in: Manipulation > DOM Insertion, Outside
+        .before()
+        Insert content, specified by the parameter, before each element in the set of matched elements.
+        
+        Also in: Manipulation > Copying
+        .clone()
+        Create a deep copy of the set of matched elements.
+        
+        Also in: CSS | Manipulation > Style Properties
+        .css()
+        Get the value of a computed style property for the first element in the set of matched elements or set one or more CSS properties for every matched element.
+        
+        Also in: Manipulation > DOM Removal
+        .detach()
+        Remove the set of matched elements from the DOM.
+        
+        Also in: Manipulation > DOM Removal
+        .empty()
+        Remove all child nodes of the set of matched elements from the DOM.
+        
+        Also in: Attributes | Manipulation > Class Attribute | CSS
+        .hasClass()
+        Determine whether any of the matched elements are assigned the given class.
+        
+        Also in: CSS | Dimensions | Manipulation > Style Properties
+        .height()
+        Get the current computed height for the first element in the set of matched elements or set the height of every matched element.
+        
+        Also in: Attributes | Manipulation > DOM Insertion, Inside
+        .html()
+        Get the HTML contents of the first element in the set of matched elements or set the HTML contents of every matched element.
+        
+        Also in: CSS | Dimensions | Manipulation > Style Properties
+        .innerHeight()
+        Get the current computed inner height (including padding but not border) for the first element in the set of matched elements or set the inner height of every matched element.
+        
+        Also in: CSS | Dimensions | Manipulation > Style Properties
+        .innerWidth()
+        Get the current computed inner width (including padding but not border) for the first element in the set of matched elements or set the inner width of every matched element.
+        
+        Also in: Manipulation > DOM Insertion, Outside
+        .insertAfter()
+        Insert every element in the set of matched elements after the target.
+        
+        Also in: Manipulation > DOM Insertion, Outside
+        .insertBefore()
+        Insert every element in the set of matched elements before the target.
+        
+        Also in: CSS | Manipulation > Style Properties
+        jQuery.cssNumber
+        An object containing all CSS properties that may be used without a unit. The .css() method uses this object to see if it may append px to unitless values.
+        
+        jQuery.htmlPrefilter()
+        Modify and filter HTML strings passed through jQuery manipulation methods.
+        
+        Also in: CSS | Offset | Manipulation > Style Properties
+        .offset()
+        Get the current coordinates of the first element, or set the coordinates of every element, in the set of matched elements, relative to the document.
+        
+        Also in: CSS | Dimensions | Manipulation > Style Properties
+        .outerHeight()
+        Get the current computed outer height (including padding, border, and optionally margin) for the first element in the set of matched elements or set the outer height of every matched element.
+        
+        Also in: CSS | Dimensions | Manipulation > Style Properties
+        .outerWidth()
+        Get the current computed outer width (including padding, border, and optionally margin) for the first element in the set of matched elements or set the outer width of every matched element.
+        
+        Also in: CSS | Offset | Manipulation > Style Properties
+        .position()
+        Get the current coordinates of the first element in the set of matched elements, relative to the offset parent.
+        
+        Also in: Manipulation > DOM Insertion, Inside
+        .prepend()
+        Insert content, specified by the parameter, to the beginning of each element in the set of matched elements.
+        
+        Also in: Manipulation > DOM Insertion, Inside
+        .prependTo()
+        Insert every element in the set of matched elements to the beginning of the target.
+        
+        Also in: Attributes | Manipulation > General Attributes
+        .prop()
+        Get the value of a property for the first element in the set of matched elements or set one or more properties for every matched element.
+        
+        Also in: Manipulation > DOM Removal
+        .remove()
+        Remove the set of matched elements from the DOM.
+        
+        Also in: Attributes | Manipulation > General Attributes
+        .removeAttr()
+        Remove an attribute from each element in the set of matched elements.
+        
+        Also in: Attributes | Manipulation > Class Attribute | CSS
+        .removeClass()
+        Remove a single class, multiple classes, or all classes from each element in the set of matched elements.
+        
+        Also in: Attributes | Manipulation > General Attributes
+        .removeProp()
+        Remove a property for the set of matched elements.
+        
+        Also in: Manipulation > DOM Replacement
+        .replaceAll()
+        Replace each target element with the set of matched elements.
+        
+        Also in: Manipulation > DOM Replacement
+        .replaceWith()
+        Replace each element in the set of matched elements with the provided new content and return the set of elements that was removed.
+        
+        Also in: CSS | Offset | Manipulation > Style Properties
+        .scrollLeft()
+        Get the current horizontal position of the scroll bar for the first element in the set of matched elements or set the horizontal position of the scroll bar for every matched element.
+        
+        Also in: CSS | Offset | Manipulation > Style Properties
+        .scrollTop()
+        Get the current vertical position of the scroll bar for the first element in the set of matched elements or set the vertical position of the scroll bar for every matched element.
+        
+        Also in: Manipulation > DOM Insertion, Inside
+        .text()
+        Get the combined text contents of each element in the set of matched elements, including their descendants, or set the text contents of the matched elements.
+        
+        Also in: Attributes | Manipulation > Class Attribute | CSS
+        .toggleClass()
+        Add or remove one or more classes from each element in the set of matched elements, depending on either the class’s presence or the value of the state argument.
+        
+        Also in: Manipulation > DOM Insertion, Around | Manipulation > DOM Removal
+        .unwrap()
+        Remove the parents of the set of matched elements from the DOM, leaving the matched elements in their place.
+        
+        Also in: Attributes | Forms | Manipulation > General Attributes
+        .val()
+        Get the current value of the first element in the set of matched elements or set the value of every matched element.
+        
+        Also in: CSS | Dimensions | Manipulation > Style Properties
+        .width()
+        Get the current computed width for the first element in the set of matched elements or set the width of every matched element.
+        
+        Also in: Manipulation > DOM Insertion, Around
+        .wrap()
+        Wrap an HTML structure around each element in the set of matched elements.
+        
+        Also in: Manipulation > DOM Insertion, Around
+        .wrapAll()
+        Wrap an HTML structure around all elements in the set of matched elements.
+        
+        Also in: Manipulation > DOM Insertion, Around
+        .wrapInner()
+        Wrap an HTML structure around the content of each element in the set of matched elements.
+    </pre>
+    <label>temp.temp.temp.</label
+    ><label class="tmp2" id="xixi">look up scroll info</label>
+    <input
+      id="such id,you'will be mad.or.crazy"
+      type="text"
+      value="hello,world"
+    />
+  </body>
+</html>

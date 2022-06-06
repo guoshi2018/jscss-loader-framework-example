@@ -1,0 +1,40 @@
+section.books {
+  width: 50%;
+  margin: 1em auto; }
+  section.books ul {
+    list-style: none;
+    padding-left: 0; }
+    section.books ul li {
+      width: 100%;
+      padding: 0; }
+      section.books ul li div.item {
+        display: flex;
+        align-content: space-around; }
+        section.books ul li div.item img {
+          width: 50%;
+          height: 15em; }
+        section.books ul li div.item img.low-vis {
+          opacity: 0.5; }
+        section.books ul li div.item .info {
+          background-color: burlywood;
+          flex-grow: 1;
+          width: 50%; }
+          section.books ul li div.item .info .title {
+            background-color: blueviolet;
+            color: bisque;
+            font-size: 1.3em;
+            /**/
+            padding: 1.2em 0.8em; }
+          section.books ul li div.item .info .author {
+            color: brown;
+            font-size: 1.2em;
+            text-align: right;
+            /**/
+            padding: 0.8em; }
+  section.books div#my-slider {
+    margin-top: 1em;
+    background-color: aquamarine; }
+    section.books div#my-slider span {
+      background-color: chocolate; }
+
+/*# sourceMappingURL=main.css.map */

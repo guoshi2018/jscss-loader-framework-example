@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "outDir": "lib/script/js",
+    //"allowJs": true,
+    "target": "esnext",
+    "module": "esnext",
+    "strict": true,
+    "importHelpers": true,
+    "moduleResolution": "node",
+    //"inlineSourceMap": true,
+    "sourceMap": true,
+  },
+  "include": [
+    "lib/script/ts/**/*.ts",
+    "lib/script/ts/page/lesson/2-ajax-bak.js",
+    "lib/script/ts/page/lesson/3-effect.bakts",
+  ],
+}

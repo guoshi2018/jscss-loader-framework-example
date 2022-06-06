@@ -1,0 +1,50 @@
+section.books {
+	width: 50%;
+	margin: 1em auto;
+	ul {
+		list-style: none;
+		padding-left: 0;
+		li {
+			width: 100%;
+			padding: 0;
+			div.item {
+				display: flex;
+				align-content: space-around;
+				img {
+					width: 50%;
+					height: 15em;
+				}
+				img.low-vis {
+					opacity: 0.5;
+				}
+				.info {
+					background-color: burlywood;
+					flex-grow: 1;
+					width: 50%;
+					.title {
+						background-color: blueviolet;
+						color: bisque;
+						font-size: 1.3em;
+						/**/
+						padding: 1.2em 0.8em;
+					}
+					.author {
+						color: brown;
+						font-size: 1.2em;
+						text-align: right;
+						/**/
+						padding: 0.8em;
+					}
+				}
+			}
+		}
+	}
+
+	div#my-slider {
+		margin-top: 1em;
+		background-color: aquamarine;
+		span {
+			background-color: chocolate;
+		}
+	}
+}

@@ -1,0 +1,36 @@
+.hover {
+  cursor: pointer;
+  background: #ffc;
+}
+
+#switcher {
+  /*position: relative; 可以留到jquery的css方法中修改*/
+  border: 1px solid grey;
+  display: inline-block;
+  margin: 1em;
+  padding: 1em 8.8em 0.8em 0.8em;
+  /*max-height: 100px;*/
+}
+.label {
+  width: 130px;
+}
+button[id^="switcher-"] {
+  border-radius: 30%;
+  position: relative;
+  margin-top: 0.5em;
+}
+
+#brave {
+  position: relative;
+}
+div.speech {
+  font-size: 2em;
+  width: 80%;
+  border: 1px double brown;
+  padding: 1em;
+}
+div.speech p:nth-child(2) {
+  margin: 3em;
+  padding: 2em;
+  border: 1px solid fuchsia;
+}

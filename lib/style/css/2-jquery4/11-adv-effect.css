@@ -1,0 +1,117 @@
+/***************************************
+   Chapter Styles
+***************************************/
+
+.team-desc {
+  margin: 0.8em;
+}
+#fx-toggle {
+  display: none;
+  margin: 1em 0;
+}
+.team {
+  width: 365px;
+  float: left;
+}
+
+.member {
+  position: relative;
+  overflow: hidden;
+  height: 85px;
+  /**/
+  border: 1px solid rgb(231, 177, 107);
+}
+.member img {
+  /**/
+  position: relative;
+  z-index: 12;
+  display: block;
+  width: 75px;
+  height: 75px;
+  padding: 5px /* 5px 5px 5px*/;
+
+  background-color: #fff;
+  cursor: pointer;
+}
+/* img.first {
+  width: 85px;
+  height: 85px;
+  padding: 0;
+} */
+
+.member div {
+  position: absolute;
+  /*
+  left: -300px; ts/js代码中修改,所以这里做隐藏先
+   left:100px;*/
+  display: none;
+  top: 0;
+  line-height: 25px;
+  margin-top: 5px;
+  padding: 0 10px 0 100px;
+  /**/
+  width: 100%;
+
+  color: #888;
+  /*
+  border: 1px solid red; */
+}
+.member .name {
+  z-index: 8;
+  color: #fff;
+  /*
+  display: none;*/
+  background-color: #888;
+  font-weight: bold;
+}
+.member .location {
+  z-index: 6;
+  font-size: 0.9em;
+  color: red;
+  /* top:20px;*/
+}
+.member .position {
+  z-index: 4;
+  font-size: 0.9em;
+  /*top:40px;*/
+}
+
+.bio {
+  position: absolute;
+
+  left: -370px;
+  /*  left:100px;*/
+
+  width: 350px;
+  margin: 0;
+  font-size: 0.9em;
+  color: rgb(255, 255, 255);
+  /*top:60px;*/
+}
+.bio a {
+  color: rgb(109, 4, 4);
+}
+#movable {
+  z-index: 0;
+  padding: 10px;
+  background-color: #888;
+  -moz-border-radius: 0 5px 5px 0;
+  -webkit-border-radius: 0 5px 5px 0;
+  border-radius: 0 5px 5px 0;
+  visibility: visible;
+  position: absolute;
+  overflow: hidden;
+  top: -1000em;
+  left: 0;
+  width: 75px;
+  height: 75px;
+}
+#movable .bio {
+  /**/
+  position: static;
+}
+
+.highlight {
+  font-weight: bold;
+  color: #090;
+}

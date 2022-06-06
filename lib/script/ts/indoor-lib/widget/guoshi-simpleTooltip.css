@@ -1,0 +1,9 @@
+.guoshi-tooltip-text {
+  position: absolute;
+  padding: 5px;
+}
+
+.guoshi-tooltip-trigger {
+  background-color: azure;
+  font-size: 1.3rem;
+}

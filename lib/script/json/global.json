@@ -1,0 +1,17 @@
+{
+	"description": "全站页面均可能用到的js文件列表的数组,排列顺序必须保证:组内无依赖关系,后面的组可依赖于前面的组,反之则不然.注意jquery3以上,删除了jQuery.event.props和jQuery.event.fixHooks.",
+	"paths": [
+		[
+			"/lib/external-core/jquery/jquery-3.6.0.js"
+		],
+		[
+			"/lib/external-core/bootstrap-4.3.1-dist/css/bootstrap.css",
+			"/lib/style/css/main.css"
+		],
+		[
+			"/lib/external-core/modernizr/modernizr.js",
+			"/lib/script/js/common/util.js",
+			"/lib/external-core/bootstrap-4.3.1-dist/js/bootstrap.js"
+		]
+	]
+}

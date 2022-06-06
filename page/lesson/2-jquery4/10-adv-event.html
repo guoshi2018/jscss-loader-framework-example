@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <title>10.高级事件处理</title>
+    <script
+      type="text/javascript"
+      src="/lib/script/js/indoor-core/jscss-loader.js"
+      entry="/lib/script/js/page/lesson/2-jquery4/10-adv-event.js"
+    ></script>
+  </head>
+  <body>
+    <!---->
+    <div class="header"></div>
+
+    <div id="container">
+      <h1 class="caption">Photo Gallery</h1>
+
+      <div id="gallery">
+        <div class="photo">
+          <img src="/lib/image/jpg/10-adv-event/skyemonroe.jpg" />
+          <div class="details">
+            <div class="description">
+              The Cuillin Mountains, Isle of Skye, Scotland.
+            </div>
+            <div class="date">12/24/2000</div>
+            <div class="photographer">Alasdair Dougall</div>
+          </div>
+        </div>
+        <div class="photo">
+          <img src="/lib/image/jpg/10-adv-event/dscn1328.jpg" />
+          <div class="details">
+            <div class="description">Mt. Ruapehu in summer</div>
+            <div class="date">01/13/2005</div>
+            <div class="photographer">Andrew McMillan</div>
+          </div>
+        </div>
+        <div class="photo">
+          <img src="/lib/image/jpg/10-adv-event/024.JPG" />
+          <div class="details">
+            <div class="description">midday sun</div>
+            <div class="date">04/26/2011</div>
+            <div class="photographer">Jaycee Barratt</div>
+          </div>
+        </div>
+        <div class="photo">
+          <img src="/lib/image/jpg/10-adv-event/dsc20040321_191051_23.jpg" />
+          <div class="details">
+            <div class="description">Dark sunset sky tones</div>
+            <div class="date">03/21/2004</div>
+            <div class="photographer">Leon Brooks</div>
+          </div>
+        </div>
+        <div class="photo">
+          <img src="/lib/image/jpg/10-adv-event/portland_178.jpg" />
+          <div class="details">
+            <div class="description">Mt. Shasta, Weed, CA</div>
+            <div class="date">06/16/2004</div>
+            <div class="photographer">Brian Lopez</div>
+          </div>
+        </div>
+        <div class="photo">
+          <img src="/lib/image/jpg/10-adv-event/michelle_229.jpg" />
+          <div class="details">
+            <div class="description">Mountain with tree cover on foothills</div>
+            <div class="date">09/28/2004</div>
+            <div class="photographer">Brian Lopez</div>
+          </div>
+        </div>
+        <div class="photo">
+          <img src="/lib/image/jpg/10-adv-event/100_0207.JPG" />
+          <div class="details">
+            <div class="description">
+              Poas Volcano, Caldera and Poor Man's Umbrella
+            </div>
+            <div class="date">01/02/2004</div>
+            <div class="photographer">Nat Edwards</div>
+          </div>
+        </div>
+        <div class="photo">
+          <img src="/lib/image/jpg/10-adv-event/DSC01281.JPG" />
+          <div class="details">
+            <div class="description">Mt Compas, South Australia</div>
+            <div class="date">01/01/2007</div>
+            <div class="photographer">Rod Conlon</div>
+          </div>
+        </div>
+        <div class="photo">
+          <img src="/lib/image/jpg/10-adv-event/m4.jpg" />
+          <div class="details">
+            <div class="description">
+              Waterfall on the outskirts of Highlands N.C.
+            </div>
+            <div class="date">11/21/2008</div>
+            <div class="photographer">Neal Floyd</div>
+          </div>
+        </div>
+      </div>
+      <a id="more-photos" href="#">More Photos</a>
+      <!--
+        <div>
+            <input id="btnReducing" type="button" value="节流测试"/>
+            click count:
+            <label id="lblMsg" ></label>
+        </div> -->
+      <div id="loadingMsg">正在加载...</div>
+      <div class="placeholder">
+        占位符: 由于container内 gallery 的内容均为
+        float,所以要保住container容器的高度,
+        在loadingMsg和more-photos均被hide的情况下,
+        要保证container下部(位于其外部)能正常 呈现,
+        应对占位符采用visibility:hidden 和 clear:both(本例left也可);
+        而不是display:none
+      </div>
+    </div>
+
+    <!-- <div class="trigger-test">
+      <h1>测试trigger,triggerHandler区别及其参数</h1>
+      <div class="consition">
+        <p>1、两者都不引发被模拟事件的页面默认行为.</p>
+        <p>
+          2、两者引发的事件(原生或自定义以及扩展),triggle会,而triggerHandler不会冒泡.
+					即 triggerHandler激发,只能被自身监听,其他监听不到.
+        </p>
+        <p>
+          3、triggerHandler()方法只针对第一个元素，而.trigger()针对集合隐式迭代。
+        </p>
+        <p>
+          4、triggerHandler()方法不能而trigger可以连缀其他方法,因为后者返回jquery对象,而前者返回any
+        </p>
+        <p>
+          5、triggerHandler激发的事件,在事件内部, 忽略 trigger _default钩子.
+          这个需要在扩展事件中方能看出
+        </p>
+        <p>5. 两者参数一致</p>
+      </div>
+      <div>
+        <a href="http://www.baidu.com" target="_blank" class="baidu">百度</a>
+        <a href="http://www.sina.com.cn" target="_blank" class="sina">新浪</a>
+        <input type="button" value="trigger-click" class="trigger-click" />
+        <input
+          type="button"
+          value="triggerHandler-click"
+          class="triggerHandler-click"
+        />
+        <input type="button" value="trigger-hello" class="trigger-hello" />
+        <input
+          type="button"
+          value="triggerHandler-hello"
+          class="triggerHandler-hello"
+        />
+      </div>
+      <hr />
+    </div>
+    <div class="ext-event" data-hey="this is a record">
+      <h1>测试扩展事件</h1>
+      <div class="middle">
+        <input type="button" value="inner-payoff" class="inner-payoff" />
+        <input type="button" value="inner-bind" class="inner-bind" />
+        <input type="button" value="inner-delegate" class="inner-delegate" />
+
+        <input type="button" value="middle-payoff" class="middle-payoff" />
+        <input type="button" value="middle-bind" class="middle-bind" />
+        <input type="button" value="middle-delegate" class="middle-delegate" />
+        <hr />
+        <input type="button" value="start" class="start" />
+        <input type="button" value="trigger" class="trigger" />
+        <input type="button" value="stop" class="stop" />
+      </div>
+    </div> -->
+
+    <div class="footer"></div>
+  </body>
+</html>
